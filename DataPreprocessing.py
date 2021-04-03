@@ -99,7 +99,6 @@ def dateTimeFunction(datetime, hour_offset):
         if(int(hour)<10):
             hour= '0' + hour
     dateTimeNew = year + month + date + hour
-    #print(datetime," ", hour_offset," ", dateTimeNew)
     return dateTimeNew
 
 class DataPreprocessing:
@@ -187,12 +186,7 @@ class DataPreprocessing:
                                         float(windFarm[int(index[0][3])]['wd']))/4),
                                    str(row[farmNumber]) )], dtype=dataRowType)
                 windDataHeader = np.hstack((windDataHeader,dataRow))
-                #print("index No:",index[0][0], "No. of Indexes returned:", len(index[0]), "index Values:", int(index[0][0]), int(index[0][1]), int(index[0][2]), int(index[0][3]))
-                #print("Wind Data Shape: ", windDataHeader.shape)
-                #print("Wind Data[0]:\n", windDataHeader[0])
-                #print("Wind Data[1]:\n", windDataHeader[1])
-                #print("Wind Data:\n", windDataHeader)
-                #break
+                
         print("Returning Data.. Exiting from function!")
         return windDataHeader     
     def accumulatePowerAndForecastVals(self):
