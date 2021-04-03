@@ -87,9 +87,9 @@ if __name__=='__main__':
     Windfarm1, Windfarm2, Windfarm3, Windfarm4, Windfarm5 = \
     objLSTM.getWindFarmData()
     nepochs = 5
-    #print(completeDataSet)
+   
     
-    #Wind Farm 1 trainiing
+    #Wind Farm 1 training and prediction
     X_train, Y_train, X_test, Y_test, test, min_max_scaler = \
     objLSTM.preProcessDataForLSTM(Windfarm1, 1, 'Wind Farm-1')
     
@@ -111,7 +111,7 @@ if __name__=='__main__':
                                                    X_test, Y_test, nepochs, 'Wind Farm-1')
     objLSTM.plotGraph(actualwf1, predictedwf1, 'Wind Farm-1', 'Stacked LSTM')
     
-    #Wind Farm 2 trainiing
+    #Wind Farm 2 training and prediction
     X_train, Y_train, X_test, Y_test, test, min_max_scaler = \
     objLSTM.preProcessDataForLSTM(Windfarm2, 1, 'Wind Farm-2')
     
@@ -128,7 +128,7 @@ if __name__=='__main__':
     
 
     
-    #Wind Farm 3 trainiing
+    #Wind Farm 3 training and prediction
     X_train, Y_train, X_test, Y_test, test, min_max_scaler = \
     objLSTM.preProcessDataForLSTM(Windfarm3, 1, 'Wind Farm-3')
     
@@ -144,7 +144,7 @@ if __name__=='__main__':
     objLSTM.plotGraph(actualwf1, predictedwf1, 'Wind Farm-3', 'Stacked LSTM')
 
     
-    #Wind Farm 4 trainiing
+    #Wind Farm 4 training and prediction
     X_train, Y_train, X_test, Y_test, test, min_max_scaler = \
     objLSTM.preProcessDataForLSTM(Windfarm4, 1, 'Wind Farm-4')
     
@@ -160,7 +160,7 @@ if __name__=='__main__':
     objLSTM.plotGraph(actualwf1, predictedwf1, 'Wind Farm-4', 'Stacked LSTM')
     
 
-    #Wind Farm 5 trainiing
+    #Wind Farm 5 training and prediction
     X_train, Y_train, X_test, Y_test, test, min_max_scaler = \
     objLSTM.preProcessDataForLSTM(Windfarm5, 1, 'Wind Farm-5')
     
