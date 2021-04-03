@@ -94,15 +94,12 @@ if __name__=='__main__':
     objLSTM.preProcessDataForLSTM(Windfarm1, 1, 'Wind Farm-1')
     
     modelLSTMbi = objLSTM.build_model_LSTMBidirectional(X_train)
-    #modeltype = 'Bidirectional LSTM'
+    
     modelLSTMstacked = objLSTM.build_model_LSTMSStacked(X_train)
-    #modelLSTMstacked
-    #modeltype = 'Stacked LSTM'
+    
     global_start_time = time.time()
         
-    #Results= open("Testresults.txt","a+")
-    #Results.write("\n"+modeltype+"\r\n")
-    #Results.close
+    
     
     actualwf1, predictedwf1 = objLSTM.modelLSTMfit(modelLSTMbi, X_train, Y_train,\
                                                    X_test, Y_test, nepochs, 'Wind Farm-1')
